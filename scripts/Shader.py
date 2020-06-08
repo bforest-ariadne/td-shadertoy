@@ -109,7 +109,7 @@ class Shader:
         use_path = False
 
         try:
-            usepath = self.ownerComp.par.Usepath.eval()
+            use_path = self.ownerComp.par.Usepath.eval()
         except Exception:
             print('no usePath parameter')
 
@@ -117,6 +117,7 @@ class Shader:
             if not self.getShaderJson():
                 debug('shader json load failed')
                 return
+
 
         else:
             if not self.getShader():
